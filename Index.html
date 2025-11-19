@@ -3,65 +3,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="css/style.css">
-
-
+    <title>FitZone - Your Ultimate Fitness Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+   
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-xl">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-dumbbell"></i> FitZone
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#plans">Plans</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#workouts">Workouts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <ul>
-        <li class="Home"><a href="default.html">Home</a></li>
-        <li class="news"><a href="news.html">News</a></li>
-        <li class="contact"><a href="contact.html">Contact</a></li>
-        <li class="About"><a href="about.html">About us</a></li>
-    </ul>
+   
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Transform Your Body, <span class="highlight">Transform Your Life</span></h1>
+            <p class="hero-subtitle">Join thousands of members achieving their fitness goals with our expert guidance and state-of-the-art facilities</p>
+            <button class="btn btn-hero" data-bs-toggle="modal" data-bs-target="#signupModal">Start Your Journey</button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
 
-    <header>
-        <h1>About Us</h1>
-    </header>
+   
+    <section class="stats-section">
+        <div class="container-xl">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number">5K+</div>
+                    <div class="stat-label">Active Members</div>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Classes Weekly</div>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Satisfaction</div>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Open Access</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="container">
-        <div class="about-box">
-            <h2>Who We Are</h2>
-            <p>
-                We are a passionate team dedicated to creating beautiful, functional, and 
-                user-friendly digital experiences. Our mission is to empower businesses and individuals 
-                with top-quality web design, software solutions, and creative innovation.
-            </p>
-
-            <h2>Our Mission</h2>
-            <p>
-                To build technology that inspires, simplifies, and transforms how people interact 
-                with the digital world. We believe in creativity, transparency, and continuous growth.
-            </p>
-
-            <h2>Meet the Team</h2>
-            <div class="team">
-                <div class="member" onclick="showMessage('msg1')">
-                    <img src="https://via.placeholder.com/90" alt="Team Member">
-                    <h3>Ledion Halimi</h3>
-                    <p>CEO & Founder</p>
-                    <div id="msg1" class="hidden-message">Alex focuses on vision, innovation, and leadership.</div>
+ 
+    <section id="plans" class="plans-section">
+        <div class="container-xl">
+            <h2 class="section-title">Choose Your Perfect Plan</h2>
+            <p class="section-subtitle">Flexible membership options tailored to your fitness goals</p>
+            
+            <div class="row g-4">
+                <!-- Starter Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="plan-card">
+                        <div class="plan-badge">Starter</div>
+                        <h3 class="plan-name">Basic</h3>
+                        <div class="plan-price"><span class="currency">$</span><span class="amount">29</span><span class="period">/month</span></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Gym Access (5am - 10pm)</li>
+                            <li><i class="fas fa-check"></i> Equipment Training</li>
+                            <li><i class="fas fa-check"></i> Locker Room Access</li>
+                            <li><i class="fas fa-times opacity-50"></i> Personal Trainer</li>
+                            <li><i class="fas fa-times opacity-50"></i> Classes Included</li>
+                        </ul>
+                        <button class="btn btn-plan">Get Started</button>
+                    </div>
                 </div>
 
-                <div class="member" onclick="showMessage('msg2')">
-                    <img src="https://via.placeholder.com/90" alt="Team Member">
-                    <h3>Lum Haziri</h3>
-                    <p>Lead Designer</p>
-                    <div id="msg2" class="hidden-message">Sophia creates stunning designs and user experiences.</div>
+            
+                <div class="col-lg-4 col-md-6">
+                    <div class="plan-card popular">
+                        <div class="plan-badge popular-badge">Most Popular</div>
+                        <h3 class="plan-name">Premium</h3>
+                        <div class="plan-price"><span class="currency">$</span><span class="amount">59</span><span class="period">/month</span></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> 24/7 Gym Access</li>
+                            <li><i class="fas fa-check"></i> All Classes Included</li>
+                            <li><i class="fas fa-check"></i> 2 Personal Sessions/Month</li>
+                            <li><i class="fas fa-check"></i> Nutrition Guide</li>
+                            <li><i class="fas fa-check"></i> Progress Tracking</li>
+                        </ul>
+                        <button class="btn btn-plan-primary">Choose Plan</button>
+                    </div>
+                </div>
+
+               
+                <div class="col-lg-4 col-md-6">
+                    <div class="plan-card">
+                        <div class="plan-badge">Elite</div>
+                        <h3 class="plan-name">Elite</h3>
+                        <div class="plan-price"><span class="currency">$</span><span class="amount">99</span><span class="period">/month</span></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Unlimited Everything</li>
+                            <li><i class="fas fa-check"></i> 8 Personal Sessions/Month</li>
+                            <li><i class="fas fa-check"></i> Meal Planning</li>
+                            <li><i class="fas fa-check"></i> Priority Support</li>
+                            <li><i class="fas fa-check"></i> Recovery Services</li>
+                        </ul>
+                        <button class="btn btn-plan">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="workouts" class="workouts-section">
+        <div class="container-xl">
+            <h2 class="section-title">Workout Guides</h2>
+            <p class="section-subtitle">Expert-designed programs for every fitness level</p>
+
+            <div class="row g-4">
+              
+                <div class="col-lg-6">
+                    <div class="workout-card">
+                        <div class="workout-header">
+                            <h3>Beginner Full Body</h3>
+                            <span class="difficulty-badge beginner">Beginner</span>
+                        </div>
+                        <p class="workout-meta"><i class="fas fa-clock"></i> 45 mins | <i class="fas fa-fire"></i> 250 cal</p>
+                        <div class="exercises">
+                            <h5>Exercises:</h5>
+                            <ol>
+                                <li>Warm-up: 5 min treadmill</li>
+                                <li>Bodyweight Squats - 3 sets x 15 reps</li>
+                                <li>Push-ups - 3 sets x 10 reps</li>
+                                <li>Dumbbell Rows - 3 sets x 12 reps</li>
+                                <li>Plank Hold - 3 sets x 30 sec</li>
+                                <li>Cool-down: 5 min stretching</li>
+                            </ol>
+                        </div>
+                        <button class="btn btn-workout" data-workout="beginner">Start Workout</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="workout-card">
+                        <div class="workout-header">
+                            <h3>Intermediate Strength</h3>
+                            <span class="difficulty-badge intermediate">Intermediate</span>
+                        </div>
+                        <p class="workout-meta"><i class="fas fa-clock"></i> 60 mins | <i class="fas fa-fire"></i> 400 cal</p>
+                        <div class="exercises">
+                            <h5>Exercises:</h5>
+                            <ol>
+                                <li>Warm-up: 10 min cardio</li>
+                                <li>Barbell Squats - 4 sets x 8 reps</li>
+                                <li>Bench Press - 4 sets x 8 reps</li>
+                                <li>Deadlifts - 3 sets x 6 reps</li>
+                                <li>Pull-ups - 3 sets x 8 reps</li>
+                                <li>Core Work - 3 sets x 12 reps</li>
+                            </ol>
+                        </div>
+                        <button class="btn btn-workout" data-workout="intermediate">Start Workout</button>
+                    </div>
+                </div>
+
+               
+                <div class="col-lg-6">
+                    <div class="workout-card">
+                        <div class="workout-header">
+                            <h3>Advanced HIIT Training</h3>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <p class="workout-meta"><i class="fas fa-clock"></i> 30 mins | <i class="fas fa-fire"></i> 450 cal</p>
+                        <div class="exercises">
+                            <h5>Circuit (Repeat 4x):</h5>
+                            <ol>
+                                <li>Burpees - 30 sec max effort</li>
+                                <li>Mountain Climbers - 30 sec max effort</li>
+                                <li>Jump Squats - 30 sec max effort</li>
+                                <li>Push-up with Rotation - 30 sec max effort</li>
+                                <li>Rest - 60 sec</li>
+                            </ol>
+                        </div>
+                        <button class="btn btn-workout" data-workout="advanced">Start Workout</button>
+                    </div>
+                </div>
+
+              
+                <div class="col-lg-6">
+                    <div class="workout-card">
+                        <div class="workout-header">
+                            <h3>Cardio Endurance Blast</h3>
+                            <span class="difficulty-badge intermediate">Intermediate</span>
+                        </div>
+                        <p class="workout-meta"><i class="fas fa-clock"></i> 50 mins | <i class="fas fa-fire"></i> 500 cal</p>
+                        <div class="exercises">
+                            <h5>Routine:</h5>
+                            <ol>
+                                <li>5 min easy pace</li>
+                                <li>3 min moderate pace</li>
+                                <li>1 min high intensity</li>
+                                <li>Repeat cycle 5x</li>
+                                <li>5 min cool-down</li>
+                            </ol>
+                        </div>
+                        <button class="btn btn-workout" data-workout="cardio">Start Workout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container-xl">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have questions? We'd love to hear from you</p>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Location</h4>
+                        <p>123 Fitness Street<br>New York, NY 10001</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h4>Phone</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>info@fitzone.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h4>Hours</h4>
+                        <p>24/7 Access<br>Support: 9am-9pm</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form mt-5">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="col-12">
+                        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-hero">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+   
+    <footer class="footer">
+        <div class="container-xl">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4">
+                    <h5>FitZone</h5>
+                    <p>Your ultimate fitness destination. Join us today and start transforming your life.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#plans">Plans</a></li>
+                        <li><a href="#workouts">Workouts</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center py-3">
+                <p>&copy; 2025 FitZone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+   
+    <div class="modal fade" id="signupModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Join FitZone Today</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Full Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="Phone Number" required>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-control" required>
+                                <option value="">Select Your Goal</option>
+                                <option value="weight-loss">Weight Loss</option>
+                                <option value="muscle-gain">Muscle Gain</option>
+                                <option value="fitness">General Fitness</option>
+                                <option value="strength">Strength Training</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-hero w-100">Get Started</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer>
-        &copy; 2025 Your Company Name. All rights reserved.
-    </footer>
+ 
+    <div class="modal fade" id="workoutModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Start Your Workout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="workoutTitle" class="fw-bold mb-3"></p>
+                    <div class="alert alert-success" role="alert">
+                        ✓ Timer started! Push yourself and track your performance.
+                    </div>
+                    <div class="workout-timer">
+                        <div class="timer-display">00:00</div>
+                    </div>
+                    <button class="btn btn-hero w-100 mt-3">End Workout</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script scr="js/main.js">
-        
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
